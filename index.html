@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	
+	<!--other links-->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Turret+Road&amp;display=swap" rel="stylesheet"> 
+	<link href="https://cdn.botframework.com/botframework-webchat/latest/botchat.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+    <title>Vehicle Damage Detection - Deep Learning</title>
+	
+  </head>
+  <body>
+  <div class="container my-1" id="innerBG">
+  
+    
+  <div class="px-3 py-3 pt-md-3 pb-md-4 mx-auto text-center" id="welcomeTxt">
+      <h1 id="welcomeTxt">Wecome to Vehicle Damage Detection</h1>
+      <p class="lead">Quickly get an effective estimation for your Car Insurance. Just upload your car picture.</p>
+    </div>
+
+  <div class="row">
+
+
+	<hr>
+	<div class="col-md-5 col-sm-12 py-4 px-4" id="leftDiv">
+
+            <input id="fileUpload" class="pb-3" type="file" onchange="readURL(this);">
+			   <p class="small pb-2">The maximum filesize is 10MB | Only jpg, jpeg, gif and png formats are currently supported.</p>
+            <div id="carImage"><img src="#" alt="your image"></div>
+			<br>
+            <button id="btnSubmit" type="button" class="btn btn-success btn-lg w-50" text-align="center" value="Submit" onclick="carDetect();">Submit</button>
+ 
+	</div>
+	
+	<div class="col-md-1 col-sm-12 py-4">
+
+ 
+	</div>
+
+	<div class="col-md-6 col-sm-12 py-4 px-4" id="rightDiv">
+	        <div class="text-center lead pb-1">Vehicle Damage Detection Status</div>
+	
+            <div class="table-responsive">
+                <table id="tblApps" class="table">
+                  <thead>
+                    <tr>
+                        <th>STEPS</th>
+                        <th>STATUS</th>
+                    </tr>
+                  </thead>
+                  <tbody id="tblBody">
+                    <tr>
+                      <td>Car Detection</td>
+                      <td id="resultCarDetect" class="blinking"></td>
+                    </tr>
+                    <tr>
+                        <td>Damage Detection</td>
+                        <td id="resultCarDamage" class="blinking"></td>
+                    </tr>
+                    <tr>
+                      <td>Damage Location</td>
+                      <td id="resultDamageLoc" class="blinking"></td>
+                    </tr>
+                    <tr>
+                        <td>Damage Severity</td>
+                        <td id="resultDamageSev" class="blinking"></td>
+                      </tr>
+                    <tr>
+                        <td>Insurance Claim</td>
+                        <td id="resultInsClaim"> Rs. 0.0</td>
+                      </tr>
+                  </tbody>
+                </table>
+            </div>
+			<img src="images/city.png" class="img-responsive w-100">
+
+  
+	</div>
+	</div><!--row-->
+	
+
+	
+	</div><!--container-->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
